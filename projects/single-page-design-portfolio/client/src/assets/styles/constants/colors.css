@@ -1,11 +1,11 @@
 :root {
   /* Accent */
   --clr-purple-400: #755cde;
+  --clr-purple-700: #552049;
   --clr-pink-400: #f39e9e;
   --clr-yellow-400: #f6a560;
   --clr-orange-400: #eb7565;
   --clr-teal-400: #61c4b7;
-  --clr-purple-400: #552049;
 
   /* Neutral */
   --clr-white-400: #fff7f0;

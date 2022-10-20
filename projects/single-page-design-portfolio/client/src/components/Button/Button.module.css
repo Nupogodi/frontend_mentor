@@ -1,0 +1,39 @@
+.btn {
+  padding: 0.75rem 2rem;
+
+  border-radius: 28px;
+  border: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+  color: var(--clr-white-400);
+}
+
+.dark {
+  background: var(--clr-black-400);
+}
+
+.dark:hover {
+  background: var(--clr-purple-400);
+}
+
+.light {
+  background: var(--clr-orange-400);
+}
+
+.light:hover {
+  background: var(--clr-yellow-400);
+}
+
+.circle {
+  line-height: 1rem;
+  border-radius: 50%;
+  padding: 1.25rem;
+}
