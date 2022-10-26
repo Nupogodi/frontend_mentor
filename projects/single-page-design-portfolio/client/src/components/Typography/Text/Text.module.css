@@ -1,0 +1,18 @@
+.text {
+  font-weight: 500;
+}
+
+/* Sizes */
+.md {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Colors */
+.dark {
+  color: var(--clr-black-400);
+}
+
+.light {
+  color: var(--clr-grey-400);
+}

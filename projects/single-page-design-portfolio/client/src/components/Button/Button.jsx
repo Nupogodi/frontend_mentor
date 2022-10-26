@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 // constants
-import { BTN_COLORS } from 'utils/constants';
+import { BTN_COLORS } from './constants';
 
 // styles
 import styles from './Button.module.css';
 
 const cx = classNames.bind(styles);
 
-const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
+export const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
   const [btnWidth, setBtnWidth] = useState(0);
   const ref = useRef();
 
@@ -34,4 +35,7 @@ const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
   );
 };
 
-export default Button;
+Button.propTypes = {
+  circle: PropTypes.bool,
+  bgColor: PropTypes.string,
+};
