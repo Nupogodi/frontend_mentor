@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
+// styles
 import styles from './Text.module.css';
 
 const cx = classNames.bind(styles);
