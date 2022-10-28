@@ -1,4 +1,8 @@
+html {
+  font-size: 62.5%;
+}
 
 body {
-    font-family: var(--ff);
+  font-size: 1.6rem;
+  font-family: var(--ff);
 }
