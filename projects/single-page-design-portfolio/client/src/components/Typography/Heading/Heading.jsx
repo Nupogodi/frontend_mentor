@@ -1,11 +1,8 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
 // styles
 import styles from './Heading.module.css';
-
-const cx = classNames.bind(styles);
 
 export const Heading = ({
   children,
@@ -14,13 +11,12 @@ export const Heading = ({
   color = 'dark',
 }) => {
   const Component = tag;
-  const className = cx({
-    [size]: true,
-    [color]: true,
-    heading: true,
-  });
 
-  return <Component className={className}>{children}</Component>;
+  return (
+    <Component className={`${styles[color]} ${styles[size]} ${styles.text}`}>
+      {children}
+    </Component>
+  );
 };
 
 Heading.propTypes = {

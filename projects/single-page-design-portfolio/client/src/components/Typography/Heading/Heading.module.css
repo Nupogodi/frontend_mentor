@@ -4,18 +4,18 @@
 
 /* Sizes */
 .lg {
-  font-size: 56px;
-  line-height: 70px;
+  font-size: 5.6rem;
+  line-height: 7rem;
 }
 
 .md {
-  font-size: 40px;
-  line-height: 51px;
+  font-size: 4rem;
+  line-height: 5.1rem;
 }
 
 .sm {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 3.2rem;
+  line-height: 4rem;
 }
 
 /* Colors */
