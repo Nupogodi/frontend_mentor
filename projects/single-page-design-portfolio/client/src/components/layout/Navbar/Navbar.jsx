@@ -13,7 +13,7 @@ export const Navbar = ({ tag = 'nav' }) => {
 
   return (
     <Component className={styles.navbar}>
-      <div className={`container dFlex ${styles.centered}`}>
+      <div className={`paddedContainer dFlex ${styles.centered}`}>
         <Logo />
         <Button>Free Consultation</Button>
       </div>

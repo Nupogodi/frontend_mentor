@@ -1,0 +1,7 @@
+.main {
+  composes: textCenter from 'assets/styles/layout.css';
+}
+
+.sectionOne {
+  composes: container from 'assets/styles/layout.css';
+}

@@ -1,5 +1,6 @@
 .heading {
   font-weight: 700;
+  margin: 0;
 }
 
 /* Sizes */
@@ -23,6 +24,10 @@
   color: var(--clr-black-400);
 }
 
-.light {
+.grey {
   color: var(--clr-grey-400);
+}
+
+.light {
+  color: var(--clr-white-400);
 }

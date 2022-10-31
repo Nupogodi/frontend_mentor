@@ -1,0 +1,14 @@
+.item {
+  border-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  justify-content: space-between;
+  text-align: left;
+}
+
+.svg {
+  margin-left: auto;
+}
