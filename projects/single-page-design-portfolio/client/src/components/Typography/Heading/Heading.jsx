@@ -9,11 +9,14 @@ export const Heading = ({
   tag = 'h2',
   size = 'lg',
   color = 'dark',
+  className = '',
 }) => {
   const Component = tag;
 
   return (
-    <Component className={`${styles[color]} ${styles[size]} ${styles.text}`}>
+    <Component
+      className={`${styles[color]} ${styles[size]} ${styles.heading} ${className}`}
+    >
       {children}
     </Component>
   );

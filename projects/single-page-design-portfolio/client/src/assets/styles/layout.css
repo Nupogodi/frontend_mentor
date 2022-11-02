@@ -1,9 +1,21 @@
 .container {
-  max-width: 1200px;
+  max-width: 110rem;
+  margin-inline: auto;
+}
+
+.padded {
+  padding: 2rem;
+}
+
+.textContainer {
+  max-width: 65ch;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 .dFlex {
   display: flex;
+}
+
+.textCenter {
+  text-align: center;
 }

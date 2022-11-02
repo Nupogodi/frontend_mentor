@@ -1,0 +1,35 @@
+.grid {
+  --columns: 2;
+
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: minmax(17rem, auto);
+
+  grid-template-areas:
+    'card1 card1 '
+    'card1 card1 '
+    'card2 card3 '
+    'card4 card4 '
+    'card5 card5 '
+    'card6 card6 ';
+}
+
+@media (min-width: 768px) {
+  .grid {
+    --columns: 4;
+    grid-template-areas:
+      'card1 card1 card2 card3 '
+      'card1 card1 card4 card4 '
+      'card5 card5 card6 card6 ';
+  }
+}
+
+@media (min-width: 1110px) {
+  .grid {
+    --columns: 6;
+    grid-template-areas:
+      'card1 card1 card2 card3 card4 card4'
+      'card1 card1 card5 card5 card6 card6';
+  }
+}

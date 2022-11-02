@@ -1,21 +1,23 @@
 .heading {
+  --fs-scale: 1;
   font-weight: 700;
+  margin: 0;
 }
 
 /* Sizes */
 .lg {
-  font-size: 5.6rem;
-  line-height: 7rem;
+  font-size: calc(5.6rem * var(--fs-scale));
+  line-height: calc(7rem * var(--fs-scale));
 }
 
 .md {
-  font-size: 4rem;
-  line-height: 5.1rem;
+  font-size: calc(4rem * var(--fs-scale));
+  line-height: calc(5.1rem * var(--fs-scale));
 }
 
 .sm {
-  font-size: 3.2rem;
-  line-height: 4rem;
+  font-size: calc(3.2rem * var(--fs-scale));
+  line-height: calc(4rem * var(--fs-scale));
 }
 
 /* Colors */
@@ -23,6 +25,25 @@
   color: var(--clr-black-400);
 }
 
-.light {
+.grey {
   color: var(--clr-grey-400);
+}
+
+.light {
+  color: var(--clr-white-400);
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .heading {
+    --fs-scale: 0.85;
+  }
+}
+
+/* Phone */
+@media (max-width: 375px) {
+  .heading {
+    --fs-scale: 0.7;
+  }
 }
