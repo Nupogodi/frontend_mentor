@@ -1,7 +1,5 @@
 import React from 'react';
-
-// constants
-import { SERVICE_LIST } from 'utils/constants';
+import PropTypes from 'prop-types';
 
 // components
 import { Item, Heading } from 'components/';
@@ -9,14 +7,20 @@ import { Item, Heading } from 'components/';
 // styles
 import styles from './ServiceGrid.module.css';
 
-export const ServiceGrid = () => {
+export const ServiceGrid = ({ data = [] }) => {
   return (
     <ul className={styles.grid}>
-      {' '}
-      {SERVICE_LIST.map((obj) => {
+      {data.map((obj) => {
         const { id, svg, color, text, gridArea } = obj;
+        const SVG = svg;
+
         return (
-          <Item gridArea={gridArea} key={id} svg={svg} color={color}>
+          <Item
+            style={{ gridArea, backgroundColor: color }}
+            key={id}
+            color={color}
+            render={(svg) => <SVG style={{ marginLeft: 'auto' }} />}
+          >
             <Heading tag='h2' size='sm' color='light'>
               {text}
             </Heading>
@@ -25,4 +29,8 @@ export const ServiceGrid = () => {
       })}
     </ul>
   );
+};
+
+ServiceGrid.propTypes = {
+  data: PropTypes.array,
 };

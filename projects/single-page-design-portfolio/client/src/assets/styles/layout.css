@@ -1,10 +1,9 @@
-.container,
-.paddedContainer {
+.container {
   max-width: 110rem;
   margin-inline: auto;
 }
 
-.paddedContainer {
+.padded {
   padding: 2rem;
 }
 

@@ -1,5 +1,8 @@
+// constants
+import { SERVICE_LIST } from 'utils/constants';
+
 // components
-import { Navbar, Heading, Text, Item, ServiceGrid, About } from 'components/';
+import { Navbar, Header, ServiceGrid, About } from 'components/';
 
 // styles
 import 'assets/styles/main.css';
@@ -10,18 +13,10 @@ function App() {
     <div className='App'>
       <Navbar tag='nav' />
       <main>
-        <div className='paddedContainer'>
-          <header className={`${styles.header} textContainer textCenter`}>
-            <Heading tag='h2' size='lg'>
-              Design solutions made easy
-            </Heading>
-            <Text tag='p' size='md'>
-              With over ten years of experience in various design disciplines,
-              I'm your one-stop shop for your design needs.
-            </Text>
-          </header>
+        <div className='padded container'>
+          <Header />
           <section className={`${styles.section} ${styles.services}`}>
-            <ServiceGrid />
+            <ServiceGrid data={SERVICE_LIST} />
           </section>
           <section className={`${styles.section} ${styles.about}`}>
             <About />

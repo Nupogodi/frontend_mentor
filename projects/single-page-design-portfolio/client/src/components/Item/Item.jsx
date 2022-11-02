@@ -4,24 +4,17 @@ import PropTypes from 'prop-types';
 // styles
 import styles from './Item.module.css';
 
-export const Item = ({ color, children, svg, gridArea }) => {
-  const SVG = svg;
-
+export const Item = ({ style, children, render }) => {
   return (
-    <div
-      style={{ backgroundColor: color, gridArea: gridArea }}
-      className={styles.item}
-    >
-      {' '}
-      <SVG className={styles.svg} />
+    <li style={style} className={styles.item}>
+      {render && render()}
       {children}
-    </div>
+    </li>
   );
 };
 
 Item.propTypes = {
   color: PropTypes.string,
-  svg: PropTypes.object,
   className: PropTypes.string,
-  gridArea: PropTypes.string,
+  render: PropTypes.func,
 };
