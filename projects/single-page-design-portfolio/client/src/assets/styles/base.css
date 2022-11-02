@@ -2,6 +2,10 @@ ul {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 html {
   font-size: 62.5%;
 }

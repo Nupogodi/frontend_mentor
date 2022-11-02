@@ -1,7 +1,7 @@
-.main {
-  composes: textCenter from 'assets/styles/layout.css';
+.section {
+  margin-bottom: 10.5rem;
 }
 
-.sectionOne {
+.services {
   composes: container from 'assets/styles/layout.css';
 }

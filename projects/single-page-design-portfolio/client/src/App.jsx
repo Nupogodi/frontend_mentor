@@ -1,5 +1,5 @@
 // components
-import { Navbar, Heading, Text, Item, ServiceGrid } from 'components/';
+import { Navbar, Heading, Text, Item, ServiceGrid, About } from 'components/';
 
 // styles
 import 'assets/styles/main.css';
@@ -9,9 +9,9 @@ function App() {
   return (
     <div className='App'>
       <Navbar tag='nav' />
-      <main className={styles.main}>
+      <main>
         <div className='paddedContainer'>
-          <header className={`${styles.header} textContainer`}>
+          <header className={`${styles.header} textContainer textCenter`}>
             <Heading tag='h2' size='lg'>
               Design solutions made easy
             </Heading>
@@ -20,8 +20,11 @@ function App() {
               I'm your one-stop shop for your design needs.
             </Text>
           </header>
-          <section className={`${styles.sectionOne}`}>
+          <section className={`${styles.section} ${styles.services}`}>
             <ServiceGrid />
+          </section>
+          <section className={`${styles.section} ${styles.about}`}>
+            <About />
           </section>
         </div>
       </main>
@@ -30,14 +33,3 @@ function App() {
 }
 
 export default App;
-
-// Q's
-// 1. Where to store constants - JS or CSS
-//
-//
-//
-
-// ToDO
-// 1. refactor grid to grid-area
-// 2. extract section content into Grid component
-//
