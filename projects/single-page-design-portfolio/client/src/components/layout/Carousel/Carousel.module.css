@@ -1,0 +1,17 @@
+.carousel {
+  --gap-size: 30px;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+
+  margin-bottom: 56px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}

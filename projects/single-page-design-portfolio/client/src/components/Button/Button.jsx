@@ -10,7 +10,13 @@ import styles from './Button.module.css';
 
 const cx = classNames.bind(styles);
 
-export const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
+export const Button = ({
+  children,
+  circle,
+  disabled,
+  bgColor = BTN_COLORS.dark,
+  onClick,
+}) => {
   const [btnWidth, setBtnWidth] = useState(0);
   const ref = useRef();
 
@@ -22,6 +28,7 @@ export const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
     btn: true,
     [bgColor]: true,
     circle,
+    disabled,
   });
 
   return (
@@ -29,6 +36,8 @@ export const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
       style={{ height: circle ? `${btnWidth}px` : 'auto' }}
       ref={ref}
       className={className}
+      onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
@@ -38,4 +47,5 @@ export const Button = ({ children, circle, bgColor = BTN_COLORS.dark }) => {
 Button.propTypes = {
   circle: PropTypes.bool,
   bgColor: PropTypes.string,
+  onClick: PropTypes.func,
 };
