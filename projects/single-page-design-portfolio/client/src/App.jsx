@@ -10,6 +10,7 @@ import {
   About,
   Carousel,
   Heading,
+  Subscribe,
 } from 'components/';
 
 // styles
@@ -36,7 +37,11 @@ function App() {
           </Heading>
           <Carousel slides={SLIDES} show={3} />
         </section>
+        <div className='padded container'>
+          <Subscribe />
+        </div>
       </main>
+      <Navbar tag='footer' />
     </div>
   );
 }
