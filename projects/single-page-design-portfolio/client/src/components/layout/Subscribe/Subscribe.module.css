@@ -1,0 +1,23 @@
+.subscribe {
+  background-color: var(--clr-black-400);
+  border-radius: var(--border-radius);
+  padding: 8.2rem;
+
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+}
+
+/* table */
+@media (max-width: 768px) {
+  .subscribe {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 4rem;
+  }
+}

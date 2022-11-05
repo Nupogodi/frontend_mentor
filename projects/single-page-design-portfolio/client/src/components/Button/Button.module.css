@@ -37,3 +37,9 @@
   border-radius: 50%;
   padding: 1.25rem;
 }
+
+.disabled,
+.disabled:hover {
+  background-color: var(--clr-grey-400);
+  cursor: default;
+}

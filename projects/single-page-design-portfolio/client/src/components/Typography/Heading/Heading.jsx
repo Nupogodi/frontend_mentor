@@ -9,13 +9,14 @@ export const Heading = ({
   tag = 'h2',
   size = 'lg',
   color = 'dark',
+  centered = false,
   className = '',
 }) => {
   const Component = tag;
 
   return (
     <Component
-      className={`${styles[color]} ${styles[size]} ${styles.heading} ${className}`}
+      className={`${styles[color]} ${styles[size]} ${styles.heading} ${className} ${centered && styles.centered}`}
     >
       {children}
     </Component>
@@ -26,4 +27,5 @@ Heading.propTypes = {
   tag: PropTypes.string,
   size: PropTypes.string,
   color: PropTypes.string,
+  centered: PropTypes.bool,
 };

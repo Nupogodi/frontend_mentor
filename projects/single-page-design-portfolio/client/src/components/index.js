@@ -5,4 +5,7 @@ export { Navbar } from './layout/Navbar/Navbar';
 export { ServiceGrid } from './layout/ServiceGrid/ServiceGrid';
 export { About } from './layout/About/About';
 export { Header } from './layout/Header/Header';
+export { Carousel } from './layout/Carousel/Carousel';
+export { Slide } from './layout/Carousel/components/Slide/Slide';
+export { Subscribe } from './layout/Subscribe/Subscribe';
 export { Item } from './Item/Item';

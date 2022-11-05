@@ -1,8 +1,17 @@
 // constants
 import { SERVICE_LIST } from 'utils/constants';
+import { SLIDES } from 'components/layout/Carousel/constants';
 
 // components
-import { Navbar, Header, ServiceGrid, About } from 'components/';
+import {
+  Navbar,
+  Header,
+  ServiceGrid,
+  About,
+  Carousel,
+  Heading,
+  Subscribe,
+} from 'components/';
 
 // styles
 import 'assets/styles/main.css';
@@ -22,7 +31,17 @@ function App() {
             <About />
           </section>
         </div>
+        <section className={`${styles.section} ${styles.portfolio}`}>
+          <Heading centered tag='h2' size='sm' color='dark'>
+            My Work
+          </Heading>
+          <Carousel slides={SLIDES} show={3} />
+        </section>
+        <div className='padded container'>
+          <Subscribe />
+        </div>
       </main>
+      <Navbar tag='footer' />
     </div>
   );
 }

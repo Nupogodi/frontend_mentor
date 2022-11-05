@@ -11,11 +11,15 @@
 
 /* Colors */
 .light {
-  color: var(--clr-black-400);
+  color: var(--clr-white-400);
+}
+
+.grey {
+  color: var(--clr-grey-400);
 }
 
 .dark {
-  color: var(--clr-grey-400);
+  color: var(--clr-black-400);
 }
 
 /* Tablet */
