@@ -54,8 +54,7 @@ TBD
 TBD 
 
 ### Useful resources
-
-TBD
+- [Using Design Tokens with the Lightning Design System](https://www.youtube.com/watch?v=wDBEc3dJJV8)
 
 ## Author
 
