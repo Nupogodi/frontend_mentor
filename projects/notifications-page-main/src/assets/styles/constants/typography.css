@@ -1,0 +1,26 @@
+:root {
+  /* Font families. */
+  --ff: 'Plus Jakarta Sans', sans-serif;
+
+  /* Font sizes. */
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+
+  /* Line heights. */
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  :root {
+    --font-size-sm: 1;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.75rem;
+  }
+}
