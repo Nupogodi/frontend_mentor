@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  padding-inline: 10px;
+
+  background-color: var(--color-badge-background-primary-default);
+  color: var(--color-badge-text-primary-default);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  font-weight: 700;
+}

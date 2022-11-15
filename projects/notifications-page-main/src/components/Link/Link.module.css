@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--color-link-primary-default);
+  transition: color 0.3s ease;
+}
+.link:visited {
+  color: var(--color-link-primary-visited);
+}
+
+.link:hover {
+  color: var(--color-link-primary-hover);
+}
