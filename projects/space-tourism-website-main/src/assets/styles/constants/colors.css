@@ -1,11 +1,12 @@
 :root {
   --color-purple-400: hsl(231, 77%, 90%);
   --color-black-400: hsl(230, 35%, 7%);
-  --color-white-400: hsl(0, 0%, 100%);
+  --color-white-400: hsla(0, 0%, 100%);
 
   /* Heading */
   --color-Heading-light: var(--color-white-400);
   --color-Heading-dark: var(--color-black-400);
+  --color-Heading-accent: var(--color-purple-400);
 
   /* Button */
   --color-Button-background-color-primary-default: var(--color-white-400);

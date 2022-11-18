@@ -1,0 +1,10 @@
+:root {
+  --sizing-xs: 12px;
+  --sizing-sm: 16px;
+  --sizing-md: 20px;
+  --sizing-lg: 24px;
+  --sizing-xl: 28px;
+  --sizing-2xl: 32px;
+
+  --page-padding: var(--sizing-lg);
+}
