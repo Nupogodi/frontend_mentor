@@ -10,6 +10,7 @@ import {
   Heading,
   Button,
   Badge,
+  NotificationsHeader,
 } from 'components';
 
 // styles
@@ -37,16 +38,10 @@ function App() {
         <Notifications
           notifications={notifications}
           renderHeader={() => (
-            <div className={styles.flexContainer}>
-              <Badge value={activeCount}>
-                <Heading tag='h2' size='xl'>
-                  Notifications
-                </Heading>
-              </Badge>
-              <Button styled='text' onClick={markAllRead}>
-                Mark all as read
-              </Button>
-            </div>
+            <NotificationsHeader
+              activeCount={activeCount}
+              onSuccess={markAllRead}
+            />
           )}
           renderBody={(notification) => (
             <NotificationItem

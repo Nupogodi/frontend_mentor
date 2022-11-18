@@ -1,0 +1,45 @@
+.typography {
+  line-height: var(--line-height);
+}
+
+/* Font family */
+.primary {
+  font-family: var(--font-family-primary);
+}
+
+.secondary {
+  font-family: var(--font-family-secondary);
+}
+
+/* Sizes */
+.xxl {
+  font-size: var(--font-size-2xl);
+}
+.xl {
+  font-size: var(--font-size-xl);
+}
+
+.lg {
+  font-size: var(--font-size-lg);
+}
+
+.md {
+  font-size: var(--font-size-md);
+}
+
+.sm {
+  font-size: var(--font-size-sm);
+}
+
+/* Colors */
+.light {
+  color: var(--color-Heading-light);
+}
+
+.dark {
+  color: var(--color-Heading-dark);
+}
+
+.centered {
+  text-align: center;
+}

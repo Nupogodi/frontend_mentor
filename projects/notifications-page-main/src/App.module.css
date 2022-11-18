@@ -8,8 +8,3 @@
   gap: 24px;
   background-color: var(--color-background-primary-default);
 }
-
-.flexContainer {
-  display: flex;
-  justify-content: space-between;
-}

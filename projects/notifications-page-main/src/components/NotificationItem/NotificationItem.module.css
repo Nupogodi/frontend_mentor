@@ -31,6 +31,11 @@
   margin-bottom: 6px;
 }
 
+.hFlow {
+  display: flex;
+  gap: 6px;
+}
+
 @media (min-width: 1440px) {
   .avatar,
   .image {
