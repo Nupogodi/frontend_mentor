@@ -1,0 +1,24 @@
+:root {
+  /* Font families. */
+  --font-family-primary: 'Barlow Condensed', sans-serif;
+  --font-family-secondary: 'Bellefair', serif;
+
+  /* Font sizes. */
+  --font-size-2xl: 9.375rem;
+  --font-size-xl: 9.375rem;
+  --font-size-lg: 3.5rem;
+  --font-size-md: 2rem;
+  --font-size-sm: 1.75rem;
+  --font-size-xs: 1rem;
+  --font-size-2xs: 0.875rem;
+
+  --line-height: 1.15;
+
+
+
+}
+
+body {
+  line-height: var(--line-height);
+  font-family: var(--font-family-primary);
+}
