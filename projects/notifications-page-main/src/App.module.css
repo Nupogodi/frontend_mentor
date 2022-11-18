@@ -1,0 +1,15 @@
+/* For demo only */
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--color-background-primary-default);
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+}

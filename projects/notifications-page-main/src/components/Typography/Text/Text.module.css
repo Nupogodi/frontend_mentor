@@ -28,7 +28,7 @@
 
 .sm {
   font-size: var(--font-size-sm);
-  line-height: var(--line-height-sm);
+  line-height: var(--line-height-md);
 }
 
 /* Colors */
@@ -38,4 +38,8 @@
 
 .light {
   color: var(--color-text-primary-default);
+}
+
+.dark {
+  color: var(--color-heading-primary-default);
 }

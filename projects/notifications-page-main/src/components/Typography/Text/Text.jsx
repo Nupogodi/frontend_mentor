@@ -29,5 +29,5 @@ Text.propTypes = {
   tag: PropTypes.string,
   size: PropTypes.string,
   color: PropTypes.string,
-  bold: PropTypes.string,
+  bold: PropTypes.bool,
 };
