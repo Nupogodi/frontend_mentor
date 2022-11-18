@@ -9,13 +9,21 @@ const cx = classNames.bind(styles);
 
 export const Button = ({
   children,
-  circle,
+  centered,
   disabled,
   bgColor,
   onClick,
   type = 'button',
   styled = 'button',
 }) => {
+  const className = cx({
+    btn: styled === 'button',
+    wrapper: styled === 'wrapper',
+    [bgColor]: true,
+    disabled,
+    centered,
+  });
+
   const [btnWidth, setBtnWidth] = useState(0);
   const ref = useRef();
 
@@ -23,19 +31,11 @@ export const Button = ({
     setBtnWidth(ref.current.clientWidth);
   }, []);
 
-  const className = cx({
-    btn: styled === 'button',
-    wrapper: styled === 'wrapper',
-    [bgColor]: true,
-    circle,
-    disabled,
-  });
-
   return (
     <button
-      style={{ height: circle ? `${btnWidth}px` : 'auto' }}
       ref={ref}
       className={className}
+      style={{ height: `${btnWidth}px` }}
       onClick={onClick}
       disabled={disabled}
       type={type}
@@ -46,7 +46,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  circle: PropTypes.bool,
+  centered: PropTypes.bool,
   bgColor: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
@@ -55,9 +55,9 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  circle: false,
+  centered: false,
   disabled: false,
   type: 'button',
   styled: 'button',
-  bgColor: 'dark',
+  bgColor: 'light',
 };

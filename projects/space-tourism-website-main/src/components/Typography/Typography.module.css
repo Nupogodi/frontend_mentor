@@ -1,5 +1,7 @@
 .typography {
+  color: var(--color-Heading-light);
   line-height: var(--line-height);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Font family */
@@ -31,6 +33,17 @@
   font-size: var(--font-size-sm);
 }
 
+.xs {
+  font-size: var(--font-size-xs);
+}
+
+.xxs {
+  font-size: var(--font-size-2xs);
+}
+.xxxs {
+  font-size: var(--font-size-3xs);
+}
+
 /* Colors */
 .light {
   color: var(--color-Heading-light);
@@ -39,7 +52,19 @@
 .dark {
   color: var(--color-Heading-dark);
 }
+.accent {
+  color: var(--color-Heading-accent);
+}
 
+/* Utilities */
 .centered {
   text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
 }

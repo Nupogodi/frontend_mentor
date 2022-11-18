@@ -2,5 +2,6 @@
 @import './resets.css';
 @import './constants/colors.css';
 @import './constants/typography.css';
+@import './constants/sizing.css';
 @import './base.css';
 @import './layout.css';

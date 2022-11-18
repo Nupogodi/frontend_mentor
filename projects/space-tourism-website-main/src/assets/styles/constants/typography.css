@@ -5,17 +5,19 @@
 
   /* Font sizes. */
   --font-size-2xl: 9.375rem;
-  --font-size-xl: 9.375rem;
+  --font-size-xl: 6.25rem;
   --font-size-lg: 3.5rem;
   --font-size-md: 2rem;
   --font-size-sm: 1.75rem;
-  --font-size-xs: 1rem;
-  --font-size-2xs: 0.875rem;
+  --font-size-xs: 1.25rem;
+  --font-size-2xs: 1rem;
+  --font-size-3xs: 0.875rem;
 
-  --line-height: 1.15;
+  --line-height: 1.55;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
 
-
-
+  --font-size-Button: var(--font-size-xs);
 }
 
 body {
