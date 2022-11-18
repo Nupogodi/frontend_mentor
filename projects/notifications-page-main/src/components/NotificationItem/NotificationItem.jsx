@@ -14,29 +14,28 @@ export function NotificationItem({ notification = {}, onSuccess = () => {} }) {
   const { description, title, url, message, image } = action;
 
   return (
-    <Button styled='wrapper' onClick={onSuccess}>
-      <div className={`${styles.notification} ${!read && styles.activeBg}`}>
-        <Link href='#'>
-          <Avatar className={styles.avatar} src={avatar} alt='' />
-        </Link>
-        <div>
-          <div className={styles.textWrapper}>
-            <div className={`hFlow ${!read && styles.active}`}>
-              <Text className='inline' tag='p' color='dark' size='sm' bold>
-                {name}
-              </Text>
-              <Text className='inline' tag='p' size='sm'>
-                {description}{' '}
-              </Text>
-              {title && <Link href={url}>{title}</Link>}
-            </div>
-            <TimeSince seconds={timeSince} />
+    // <Button styled='wrapper' onClick={onSuccess}>
+    <div className={`${styles.notification} ${!read && styles.activeBg}`}>
+      <Link href='#'>
+        <Avatar className={styles.avatar} src={avatar} alt='' />
+      </Link>
+      <div>
+        <div className={styles.textWrapper}>
+          <div className={`${styles.hFlow} ${!read && styles.active}`}>
+            <Text className='inline' tag='p' color='dark' size='sm' bold>
+              {name}
+            </Text>
+            <Text className='inline' tag='p' size='sm'>
+              {description}{' '}
+            </Text>
+            {title && <Link href={url}>{title}</Link>}
           </div>
-          {message && <Message message={message} />}
+          <TimeSince seconds={timeSince} />
         </div>
-        {image && <Avatar className={styles.image} src={image} alt='' />}
+        {message && <Message message={message} />}
       </div>
-    </Button>
+      {image && <Avatar className={styles.image} src={image} alt='' />}
+    </div>
   );
 }
 

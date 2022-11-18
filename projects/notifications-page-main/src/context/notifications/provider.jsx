@@ -15,12 +15,7 @@ export const NotificationsProvider = ({ children }) => {
   };
 
   const getActiveCount = () => {
-    let count = 0;
-    notifications.forEach((notification) => {
-      if (!notification.read) count++;
-    });
-
-    return count;
+    return notifications.filter((notification) => !notification.read).length;
   };
 
   const markAllRead = () => {
