@@ -8,23 +8,29 @@ import { Typography } from 'components';
 // styles
 import styles from './NavItem.module.css';
 
-export function NavItem({ index, url, title }) {
-  return (
+export const NavItem = ({ index, url, title, showDigits }) => (
     <Link to={url}>
       <div className={styles.navLink}>
-        <Typography tag='p' bold size='xxs' letterSpacing={2.7} uppercase>
-          {index > 9 ? index : `0${index}`}
-        </Typography>
-        <Typography tag='p' size='xxs' letterSpacing={2.7} uppercase>
+        {showDigits && (
+          <Typography tag='p' bold preset='navText'>
+            {index > 9 ? index : `0${index}`}
+          </Typography>
+        )}
+
+        <Typography tag='p' preset='navText'>
           {title}
         </Typography>
       </div>
     </Link>
-  );
-}
+  )
 
 NavItem.propTypes = {
   index: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  showDigits: PropTypes.bool,
+};
+
+NavItem.defaultProps = {
+  showDigits: true,
 };

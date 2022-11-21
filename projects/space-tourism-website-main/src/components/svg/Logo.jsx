@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export function Logo() {
-  return (
-    <svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'>
+export const Logo = ({ size = '40px' }) => (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      viewBox='0 0 50 50'
+    >
       <g fill='none' fillRule='evenodd'>
         <circle cx='24' cy='24' r='24' fill='#FFF' />
         <path
@@ -11,5 +16,12 @@ export function Logo() {
         />
       </g>
     </svg>
-  );
-}
+  )
+
+Logo.propTypes = {
+  size: PropTypes.string,
+};
+
+Logo.defaultProps = {
+  size: '40px',
+};

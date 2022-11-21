@@ -1,7 +1,7 @@
-@import 'sanitize.css';
-@import './resets.css';
-@import './constants/colors.css';
-@import './constants/typography.css';
-@import './constants/sizing.css';
-@import './base.css';
-@import './layout.css';
+@import url("sanitize.css");
+@import url("./resets.css");
+@import url("./constants/colors.css");
+@import url("./constants/typography.css");
+@import url("./constants/sizing.css");
+@import url("./base.css");
+@import url("./layout.css");

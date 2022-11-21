@@ -1,7 +1,12 @@
 :root {
-  --color-purple-400: hsl(231, 77%, 90%);
-  --color-black-400: hsl(230, 35%, 7%);
-  --color-white-400: hsla(0, 0%, 100%);
+  --color-purple-400: hsl(231deg 77% 90%);
+  --color-black-400: hsl(230deg 35% 7%);
+  --color-white-400: hsl(0deg 0% 100%);
+  --color-white-translucent: hsl(0deg 0% 100% / 50%);
+
+  /* Navbar */
+  --color-NavItem-border-active: var(--color-white-400);
+  --color-NavItem-border-hover: var(--color-white-translucent);
 
   /* Heading */
   --color-Heading-light: var(--color-white-400);

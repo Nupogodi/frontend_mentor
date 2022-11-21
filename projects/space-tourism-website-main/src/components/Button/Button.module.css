@@ -1,51 +1,55 @@
 /* Styles */
 .btn {
-  border: none;
-  display: block;
-
-  cursor: pointer;
+  position: relative;
+  z-index: 0;
   padding: 28px;
-  background-color: transparent;
+
+  display: block;
 
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-Button);
   line-height: var(--line-height);
   text-transform: uppercase;
-  color: var(--color-Button-text-primary-default);
 
-  position: relative;
-  z-index: 1;
+  color: var(--color-Button-text-primary-default);
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
 }
 
 .btn::before {
   position: absolute;
-  z-index: -1;
-
-  content: '';
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  border-radius: 50%;
+  z-index: -1;
 
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
   background-color: var(--color-Button-background-color-primary-default);
+
+  content: "";
 }
 
 .btn::after {
   position: absolute;
-  z-index: -1;
-
-  content: '';
-  width: 150%;
-  height: 150%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: -1;
 
+  width: 150%;
+  height: 150%;
+
+  opacity: 0;
   border-radius: 50%;
   background-color: var(--color-Button-background-color-primary-default);
-  opacity: 0;
+
   transition: opacity 0.5s ease;
+  transform: translate(-50%, -50%);
+
+  content: "";
 }
 
 .btn:hover::after {
@@ -53,11 +57,13 @@
 }
 
 .wrapper {
+  text-align: inherit;
+
   border: inherit;
   border-radius: inherit;
-  text-align: inherit;
-  cursor: pointer;
   background-color: inherit;
+
+  cursor: pointer;
 }
 
 .centered {
@@ -67,5 +73,6 @@
 .disabled,
 .disabled:hover {
   background-color: var(--clr-grey-400);
+
   cursor: default;
 }

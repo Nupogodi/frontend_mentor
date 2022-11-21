@@ -1,4 +1,4 @@
 .navLink {
   display: flex;
-  gap: var(--sizing-xs);
+  gap: var(--sizing-10);
 }

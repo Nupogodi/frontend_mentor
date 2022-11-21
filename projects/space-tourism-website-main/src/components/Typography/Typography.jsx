@@ -7,7 +7,7 @@ import styles from './Typography.module.css';
 
 const cx = classNames.bind(styles);
 
-export function Typography({
+export const Typography = ({
   children,
   tag = 'h2',
   size = 'md',
@@ -15,12 +15,13 @@ export function Typography({
   centered = false,
   font = 'primary',
   bold = false,
-  letterSpacing = 0,
   uppercase = false,
-}) {
+  preset = 'bodyText1',
+}) => {
   const Component = tag;
 
   const className = cx({
+    [preset]: preset,
     [size]: size,
     [color]: color,
     [centered]: centered,
@@ -31,12 +32,8 @@ export function Typography({
     typography: true,
   });
 
-  return (
-    <Component className={className} style={{ letterSpacing }}>
-      {children}
-    </Component>
-  );
-}
+  return <Component className={className}>{children}</Component>;
+};
 
 Typography.propTypes = {
   tag: PropTypes.string,
@@ -45,7 +42,6 @@ Typography.propTypes = {
   color: PropTypes.string,
   centered: PropTypes.bool,
   font: PropTypes.string,
-  letterSpacing: PropTypes.number,
   uppercase: PropTypes.bool,
 };
 
@@ -56,6 +52,5 @@ Typography.defaultProps = {
   size: 'md',
   color: 'light',
   centered: false,
-  letterSpacing: 0,
   uppercase: false,
 };

@@ -1,24 +1,25 @@
 .home {
-  background: url('../../assets/images/home/background-home-mobile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-
-  overflow: hidden;
-  position: relative;
+  background: url("../../assets/images/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  gap: var(--sizing-100);
 }
 
-.introduction {
+.main {
   display: flex;
   flex-direction: column;
-  gap: 48px;
 }
 
-.textContainer {
-  text-align: center;
+@media (min-width: 1440px) {
+  .home {
+    padding-top: var(--sizing-80);
+  }
 }

@@ -4,3 +4,6 @@ export { Close } from './svg/Close';
 export { Typography } from './Typography/Typography';
 export { Button } from './Button/Button';
 export { Navbar } from './layout/Navbar/Navbar';
+export { NavItem } from './layout/Navbar/components/NavItem/NavItem';
+export { DesktopView } from './layout/Navbar/components/DesktopView/DesktopView';
+export { MobileView } from './layout/Navbar/components/MobileView/MobileView';
