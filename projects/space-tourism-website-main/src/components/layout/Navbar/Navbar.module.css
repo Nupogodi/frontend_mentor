@@ -8,14 +8,19 @@
   margin-inline: auto;
 }
 
+.logo {
+  width: 40px;
+  border: 2px salmon solid;
+}
+
 .toggleBtn {
   position: relative;
   z-index: 10;
 }
 
-.decorativeLine {
+.divider {
   position: relative;
-  left: 2%;
+  left: 25px;
   z-index: 11;
 
   display: none;
@@ -30,10 +35,14 @@
   .nav {
     padding-block: 0;
   }
+
+  .logo {
+    width: 48px;
+  }
 }
 
 @media (min-width: 1440px) {
-  .decorativeLine {
+  .divider {
     display: block;
   }
 }

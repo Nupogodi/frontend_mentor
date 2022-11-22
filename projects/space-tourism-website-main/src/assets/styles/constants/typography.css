@@ -28,7 +28,6 @@
   --line-height: 1.55;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-size-Button: var(--font-size-xs);
 }
 
 body {

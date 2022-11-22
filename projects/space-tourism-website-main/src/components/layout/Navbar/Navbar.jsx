@@ -28,8 +28,6 @@ export const Navbar = () => {
     '(min-width: 1440px)',
   ]);
 
-  const logoWidth = isTablet ? '48px' : '40px';
-
   const toggleMobileDrawer = function () {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
@@ -37,9 +35,9 @@ export const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <Link to={ROUTES.home.url}>
-        <Logo size={logoWidth} />
+        <Logo className={styles.logo} />
       </Link>
-      <div className={styles.decorativeLine} />
+      <div className={styles.divider} />
       {isTablet ? (
         <DesktopView isDesktop={isDesktop} />
       ) : (
@@ -54,4 +52,4 @@ export const Navbar = () => {
       )}
     </nav>
   );
-}
+};

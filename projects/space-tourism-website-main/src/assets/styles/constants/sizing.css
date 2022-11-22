@@ -10,6 +10,7 @@
   --sizing-90: 44px;
   --sizing-100: 48px;
   --page-padding: var(--sizing-40);
+  --page-container: 1100px;
 }
 
 @media (min-width: 768px) {

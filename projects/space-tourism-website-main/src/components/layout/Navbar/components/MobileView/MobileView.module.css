@@ -13,17 +13,9 @@
 
   transition: right 0.3s ease;
 
-  backdrop-filter: blur(8px); /* Safari 9+ */
-  backdrop-filter: blur(8px); /* Chrome and Opera */
+  backdrop-filter: blur(8px); /* Safari 9+ Chrome and Opera */
 }
 
 .active {
   right: calc(0% - var(--page-padding));
-}
-
-.navList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sizing-60);
-  padding-inline: var(--sizing-60);
 }

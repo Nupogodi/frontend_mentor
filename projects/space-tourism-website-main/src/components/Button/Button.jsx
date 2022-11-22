@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
@@ -15,27 +15,20 @@ export const Button = ({
   onClick,
   type = 'button',
   styled = 'button',
+  className,
 }) => {
-  const className = cx({
+  const classNameList = cx({
     btn: styled === 'button',
     wrapper: styled === 'wrapper',
     [bgColor]: true,
     disabled,
     centered,
+    className,
   });
-
-  const [btnWidth, setBtnWidth] = useState(0);
-  const ref = useRef();
-
-  useEffect(() => {
-    setBtnWidth(ref.current.clientWidth);
-  }, []);
 
   return (
     <button
-      ref={ref}
-      className={className}
-      style={{ height: `${btnWidth}px` }}
+      className={classNameList}
       onClick={onClick}
       disabled={disabled}
       type={type}

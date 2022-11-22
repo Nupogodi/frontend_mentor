@@ -1,8 +1,11 @@
-/* Styles */
 .btn {
+  --font-size-Button: var(--font-size-xs);
+
   position: relative;
   z-index: 0;
-  padding: 28px;
+  padding: var(--sizing-50);
+  width: 150px;
+  height: 150px;
 
   display: block;
 
@@ -13,24 +16,11 @@
 
   color: var(--color-Button-text-primary-default);
   border: none;
-  background-color: transparent;
-
-  cursor: pointer;
-}
-
-.btn::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
-
   border-radius: 50%;
+  background-color: transparent;
   background-color: var(--color-Button-background-color-primary-default);
 
-  content: "";
+  cursor: pointer;
 }
 
 .btn::after {
@@ -49,7 +39,7 @@
   transition: opacity 0.5s ease;
   transform: translate(-50%, -50%);
 
-  content: "";
+  content: '';
 }
 
 .btn:hover::after {
@@ -75,4 +65,21 @@
   background-color: var(--clr-grey-400);
 
   cursor: default;
+}
+
+@media (min-width: 768px) {
+
+  .btn {
+    --font-size-Button: var(--font-size-lg);
+    width: 242px;
+    height: 242px;
+    
+  }
+}
+
+@media (min-width: 1440px) {
+  .btn {
+    width: 274px;
+    height: 274px;
+  }
 }

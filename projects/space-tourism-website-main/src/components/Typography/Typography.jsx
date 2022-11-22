@@ -16,7 +16,8 @@ export const Typography = ({
   font = 'primary',
   bold = false,
   uppercase = false,
-  preset = 'bodyText1',
+  preset = 'text',
+  // className,
 }) => {
   const Component = tag;
 
@@ -30,6 +31,7 @@ export const Typography = ({
     centered,
     bold,
     typography: true,
+    // className,
   });
 
   return <Component className={className}>{children}</Component>;
@@ -43,6 +45,7 @@ Typography.propTypes = {
   centered: PropTypes.bool,
   font: PropTypes.string,
   uppercase: PropTypes.bool,
+  preset: PropTypes.string,
 };
 
 Typography.defaultProps = {
@@ -53,4 +56,5 @@ Typography.defaultProps = {
   color: 'light',
   centered: false,
   uppercase: false,
+  preset: 'heading2',
 };

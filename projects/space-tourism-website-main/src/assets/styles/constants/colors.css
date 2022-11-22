@@ -5,6 +5,7 @@
   --color-white-translucent: hsl(0deg 0% 100% / 50%);
 
   /* Navbar */
+  --color-NavItem-counter: var(--color-white-400);
   --color-NavItem-border-active: var(--color-white-400);
   --color-NavItem-border-hover: var(--color-white-translucent);
 

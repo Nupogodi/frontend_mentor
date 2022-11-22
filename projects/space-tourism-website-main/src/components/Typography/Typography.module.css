@@ -119,13 +119,13 @@
 
 .navText {
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-5xs);
+  font-size: var(--font-size-2xs);
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--leter-spacing-md);
   text-transform: uppercase;
 }
 
-.bodyText {
+.text {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-3xs);
   font-weight: var(--font-weight-regular);
