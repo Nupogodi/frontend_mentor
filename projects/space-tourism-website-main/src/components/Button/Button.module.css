@@ -1,48 +1,85 @@
-/* Styles */
 .btn {
-  padding: 0.75rem 2rem;
+  --font-size-Button: var(--font-size-xs);
 
-  border-radius: 28px;
-  border: none;
+  position: relative;
+  z-index: 0;
+  padding: var(--sizing-50);
+  width: 150px;
+  height: 150px;
 
-  cursor: pointer;
+  display: block;
 
   font-family: var(--font-family-secondary);
-  font-size: inherit;
-  font-style: normal;
-  font-weight: 700;
+  font-size: var(--font-size-Button);
   line-height: var(--line-height);
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
-  color: var(--clr-white-400);
+
+  color: var(--color-Button-text-primary-default);
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  background-color: var(--color-Button-background-color-primary-default);
+
+  cursor: pointer;
 }
 
+.btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
 
-.textBtn:hover {
-  color: var(--color-notificationItem-background-primary-hover);
+  width: 150%;
+  height: 150%;
+
+  opacity: 0;
+  border-radius: 50%;
+  background-color: var(--color-Button-background-color-primary-default);
+
+  transition: opacity 0.5s ease;
+  transform: translate(-50%, -50%);
+
+  content: '';
+}
+
+.btn:hover::after {
+  opacity: 0.1;
 }
 
 .wrapper {
+  text-align: inherit;
+
   border: inherit;
   border-radius: inherit;
-  width: 100%;
-  text-align: inherit;
-  cursor: pointer;
   background-color: inherit;
+
+  cursor: pointer;
 }
 
-.dark {
-  background: var(--color-Button-background-color-primary-default);
-}
-
-.circle {
-  line-height: 1rem;
-  border-radius: 50%;
-  padding: 1.25rem;
+.centered {
+  margin: 0 auto;
 }
 
 .disabled,
 .disabled:hover {
   background-color: var(--clr-grey-400);
+
   cursor: default;
+}
+
+@media (min-width: 768px) {
+
+  .btn {
+    --font-size-Button: var(--font-size-lg);
+    width: 242px;
+    height: 242px;
+    
+  }
+}
+
+@media (min-width: 1440px) {
+  .btn {
+    width: 274px;
+    height: 274px;
+  }
 }

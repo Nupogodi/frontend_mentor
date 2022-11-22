@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
@@ -9,33 +9,26 @@ const cx = classNames.bind(styles);
 
 export const Button = ({
   children,
-  circle,
+  centered,
   disabled,
   bgColor,
   onClick,
   type = 'button',
   styled = 'button',
+  className,
 }) => {
-  const [btnWidth, setBtnWidth] = useState(0);
-  const ref = useRef();
-
-  useEffect(() => {
-    setBtnWidth(ref.current.clientWidth);
-  }, []);
-
-  const className = cx({
+  const classNameList = cx({
     btn: styled === 'button',
     wrapper: styled === 'wrapper',
     [bgColor]: true,
-    circle,
     disabled,
+    centered,
+    className,
   });
 
   return (
     <button
-      style={{ height: circle ? `${btnWidth}px` : 'auto' }}
-      ref={ref}
-      className={className}
+      className={classNameList}
       onClick={onClick}
       disabled={disabled}
       type={type}
@@ -46,7 +39,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  circle: PropTypes.bool,
+  centered: PropTypes.bool,
   bgColor: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
@@ -55,9 +48,9 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  circle: false,
+  centered: false,
   disabled: false,
   type: 'button',
   styled: 'button',
-  bgColor: 'dark',
+  bgColor: 'light',
 };

@@ -1,0 +1,20 @@
+.container {
+  max-width: var(--page-container);
+  margin-inline: auto;
+}
+
+.padded {
+  padding: var(--page-padding);
+}
+
+.paddedBlock {
+  padding-block: var(--page-padding);
+}
+
+.paddedInline {
+  padding-inline: var(--page-padding);
+}
+
+.pageFixer {
+  padding-top: var(--nav-height);
+}

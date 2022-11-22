@@ -1,0 +1,9 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizing-100);
+}
+
+.textContainer {
+  text-align: center;
+}

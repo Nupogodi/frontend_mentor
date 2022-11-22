@@ -1,0 +1,21 @@
+.mobileDrawer {
+  position: absolute;
+  top: calc(0% - var(--page-padding));
+  right: -100%;
+  z-index: 1;
+  padding-top: 120px;
+
+  min-width: 250px;
+  min-height: calc(100% + var(--page-padding));
+
+  background-color: rgb(228 228 228 / 15%);
+  box-shadow: 0 10px 15px 10px rgb(0 0 0 / 15%);
+
+  transition: right 0.3s ease;
+
+  backdrop-filter: blur(8px); /* Safari 9+ Chrome and Opera */
+}
+
+.active {
+  right: calc(0% - var(--page-padding));
+}

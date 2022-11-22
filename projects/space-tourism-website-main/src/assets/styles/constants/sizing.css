@@ -1,0 +1,20 @@
+:root {
+  --sizing-10: 12px;
+  --sizing-20: 16px;
+  --sizing-30: 20px;
+  --sizing-40: 24px;
+  --sizing-50: 28px;
+  --sizing-60: 32px;
+  --sizing-70: 36px;
+  --sizing-80: 40px;
+  --sizing-90: 44px;
+  --sizing-100: 48px;
+  --page-padding: var(--sizing-40);
+  --page-container: 1100px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: var(--sizing-80);
+  }
+}

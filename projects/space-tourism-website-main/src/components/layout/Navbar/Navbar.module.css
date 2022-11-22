@@ -1,0 +1,47 @@
+.nav {
+  padding: var(--page-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+.logo {
+  width: 40px;
+}
+
+.toggleBtn {
+  position: relative;
+  z-index: 10;
+}
+
+.divider {
+  position: relative;
+  left: 25px;
+  z-index: 11;
+
+  display: none;
+  flex: 1;
+  height: 1px;
+
+  opacity: 0.25;
+  background-color: var(--color-white-400);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding-block: 0;
+  }
+
+  .logo {
+    width: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .divider {
+    display: block;
+  }
+}
